@@ -76,7 +76,7 @@ const removeBackground = async (imageUrl, callback) => {
   try {
     const response = await axios(options);
     console.log(response)
-    const backgroundRemovedImageUrl = response.data.url; // Adjust this based on API response format
+    const backgroundRemovedImageUrl = response.data.response.image_url; // Adjust this based on API response format
     callback(backgroundRemovedImageUrl);
   } catch (error) {
     console.error(`Error removing background: ${error.message}`);
